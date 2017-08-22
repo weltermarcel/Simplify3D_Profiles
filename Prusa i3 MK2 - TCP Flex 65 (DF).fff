@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<profile name="Prusa i3 MK2" version="2017-08-17 23:00:08" app="S3D-Software 4.0.0">
+<profile name="Prusa i3 MK2 - TCP Flex 65 (DF)" version="2017-08-20 22:20:49" app="S3D-Software 4.0.0">
   <baseProfile>Prusa Mendel (modified)</baseProfile>
-  <printMaterial>PET-G (DF)</printMaterial>
+  <printMaterial>TCP Flex 65 (DF)</printMaterial>
   <printQuality>NORMAL 0.2mm</printQuality>
   <printExtruders></printExtruders>
   <extruder name="Primary Extruder">
@@ -92,7 +92,7 @@
     <relayBetweenLayers>0</relayBetweenLayers>
     <relayBetweenLoops>0</relayBetweenLoops>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="215"/>
+    <setpoint layer="1" temperature="260"/>
   </temperatureController>
   <temperatureController name="Heated Bed">
     <temperatureNumber>1</temperatureNumber>
@@ -100,11 +100,11 @@
     <relayBetweenLayers>0</relayBetweenLayers>
     <relayBetweenLoops>0</relayBetweenLoops>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="65"/>
+    <setpoint layer="1" temperature="50"/>
   </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0"/>
-    <setpoint layer="2" speed="100"/>
+    <setpoint layer="2" speed="50"/>
   </fanSpeed>
   <blipFanToFullPower>1</blipFanToFullPower>
   <adjustSpeedForCooling>1</adjustSpeedForCooling>
@@ -198,30 +198,6 @@
   <singleExtrusionMaxPrintingWidthPercentage>200</singleExtrusionMaxPrintingWidthPercentage>
   <singleExtrusionEndpointExtension>0.2</singleExtrusionEndpointExtension>
   <horizontalSizeCompensation>0</horizontalSizeCompensation>
-  <autoConfigureMaterial name="PLA">
-    <temperatureController name="Primary Extruder">
-      <temperatureNumber>0</temperatureNumber>
-      <isHeatedBed>0</isHeatedBed>
-      <relayBetweenLayers>0</relayBetweenLayers>
-      <relayBetweenLoops>0</relayBetweenLoops>
-      <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="205"/>
-    </temperatureController>
-    <globalBedTemperature>65</globalBedTemperature>
-    <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
-    <fanSpeed>
-      <setpoint layer="1" speed="0"/>
-      <setpoint layer="2" speed="100"/>
-    </fanSpeed>
-  </autoConfigureMaterial>
-  <autoConfigureMaterial name="ABS">
-    <globalExtruderTemperature>255</globalExtruderTemperature>
-    <globalBedTemperature>100</globalBedTemperature>
-    <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
-    <fanSpeed>
-      <setpoint layer="1" speed="0"/>
-    </fanSpeed>
-  </autoConfigureMaterial>
   <autoConfigureQuality name="DETAIL 0.05mm">
     <layerHeight>0.05</layerHeight>
     <infillPercentage>19</infillPercentage>
@@ -321,46 +297,18 @@
       <retractionZLift>0</retractionZLift>
       <retractionSpeed>3600</retractionSpeed>
       <useCoasting>1</useCoasting>
-      <coastingDistance>0.8</coastingDistance>
+      <coastingDistance>1</coastingDistance>
       <useWipe>1</useWipe>
       <wipeDistance>2</wipeDistance>
     </extruder>
   </autoConfigureQuality>
-  <autoConfigureMaterial name="PC-ABS (DF)">
-    <globalExtruderTemperature>265</globalExtruderTemperature>
-    <globalBedTemperature>100</globalBedTemperature>
-    <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
-    <fanSpeed>
-      <setpoint layer="1" speed="0"/>
-      <setpoint layer="2" speed="50"/>
-      <setpoint layer="15" speed="80"/>
-    </fanSpeed>
-  </autoConfigureMaterial>
-  <autoConfigureMaterial name="PET-G (DF)">
-    <globalExtruderTemperature>215</globalExtruderTemperature>
-    <globalBedTemperature>65</globalBedTemperature>
-    <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
-    <fanSpeed>
-      <setpoint layer="1" speed="0"/>
-      <setpoint layer="2" speed="100"/>
-    </fanSpeed>
-  </autoConfigureMaterial>
   <autoConfigureMaterial name="TCP Flex 65 (DF)">
     <globalExtruderTemperature>260</globalExtruderTemperature>
-    <globalBedTemperature>65</globalBedTemperature>
+    <globalBedTemperature>50</globalBedTemperature>
     <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
     <fanSpeed>
       <setpoint layer="1" speed="0"/>
       <setpoint layer="2" speed="50"/>
-    </fanSpeed>
-  </autoConfigureMaterial>
-  <autoConfigureMaterial name="PET-G (extrudr)">
-    <globalExtruderTemperature>210</globalExtruderTemperature>
-    <globalBedTemperature>65</globalBedTemperature>
-    <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
-    <fanSpeed>
-      <setpoint layer="1" speed="0"/>
-      <setpoint layer="2" speed="100"/>
     </fanSpeed>
   </autoConfigureMaterial>
 </profile>
