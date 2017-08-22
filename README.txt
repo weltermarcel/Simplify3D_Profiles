@@ -8,5 +8,5 @@ Dutch Filaments (1.75mm http://www.dutchfilaments.com/)
 	PC-ABS
 	PET-G
 	
-Extrudr (1.75mm)
+Extrudr (1.75mm https://extrudr.eu/)
 	PET-G
