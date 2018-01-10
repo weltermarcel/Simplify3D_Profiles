@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="Prusa i3 MK2 - TCP Flex 65 (DF)" version="2017-08-20 22:20:49" app="S3D-Software 4.0.0">
+<profile name="Prusa i3 MK2 - TCP Flex 65 (DF)" version="2018-01-06 06:26:20" app="S3D-Software 4.0.0">
   <baseProfile>Prusa Mendel (modified)</baseProfile>
   <printMaterial>TCP Flex 65 (DF)</printMaterial>
   <printQuality>NORMAL 0.2mm</printQuality>
@@ -11,12 +11,12 @@
     <width>0.4</width>
     <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
-    <retractionDistance>1.2</retractionDistance>
+    <retractionDistance>0.8</retractionDistance>
     <extraRestartDistance>0</extraRestartDistance>
     <retractionZLift>0</retractionZLift>
     <retractionSpeed>3600</retractionSpeed>
     <useCoasting>1</useCoasting>
-    <coastingDistance>0.8</coastingDistance>
+    <coastingDistance>0.4</coastingDistance>
     <useWipe>1</useWipe>
     <wipeDistance>2</wipeDistance>
   </extruder>
@@ -24,7 +24,7 @@
   <layerHeight>0.2</layerHeight>
   <topSolidLayers>3</topSolidLayers>
   <bottomSolidLayers>3</bottomSolidLayers>
-  <perimeterOutlines>2</perimeterOutlines>
+  <perimeterOutlines>4</perimeterOutlines>
   <printPerimetersInsideOut>1</printPerimetersInsideOut>
   <startPointOption>2</startPointOption>
   <startPointOriginX>0</startPointOriginX>
@@ -45,7 +45,7 @@
   <useSkirt>0</useSkirt>
   <skirtExtruder>0</skirtExtruder>
   <skirtLayers>1</skirtLayers>
-  <skirtOutlines>10</skirtOutlines>
+  <skirtOutlines>15</skirtOutlines>
   <skirtOffset>0</skirtOffset>
   <usePrimePillar>0</usePrimePillar>
   <primePillarExtruder>999</primePillarExtruder>
@@ -62,7 +62,7 @@
   <infillExtruder>0</infillExtruder>
   <internalInfillPattern>Grid</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>22</infillPercentage>
+  <infillPercentage>35</infillPercentage>
   <outlineOverlapPercentage>25</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>2</minInfillLength>
@@ -100,7 +100,7 @@
     <relayBetweenLayers>0</relayBetweenLayers>
     <relayBetweenLoops>0</relayBetweenLoops>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="50"/>
+    <setpoint layer="1" temperature="60"/>
   </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0"/>
@@ -108,8 +108,8 @@
   </fanSpeed>
   <blipFanToFullPower>1</blipFanToFullPower>
   <adjustSpeedForCooling>1</adjustSpeedForCooling>
-  <minSpeedLayerTime>8</minSpeedLayerTime>
-  <minCoolingSpeedSlowdown>30</minCoolingSpeedSlowdown>
+  <minSpeedLayerTime>10</minSpeedLayerTime>
+  <minCoolingSpeedSlowdown>40</minCoolingSpeedSlowdown>
   <increaseFanForCooling>0</increaseFanForCooling>
   <minFanLayerTime>45</minFanLayerTime>
   <maxCoolingFanSpeed>100</maxCoolingFanSpeed>
@@ -146,7 +146,7 @@
   <baudRateOverride>250000</baudRateOverride>
   <overridePrinterModels>1</overridePrinterModels>
   <printerModelsOverride></printerModelsOverride>
-  <startingGcode>M115 U3.0.7 ; tell the printer latest firmware varsion available,G28 W ; home all without mesh bed level,G80 ; mesh bed leveling,G1 Y-3.0 F1000.0 ; go outside printing area,G1 X60.0 E9.0  F1000.0 ; intro line,G1 X100.0 E12.5  F1000.0 ; intro line</startingGcode>
+  <startingGcode>M92 E170.0,M115 U3.0.7 ; tell the printer latest firmware varsion available,G28 W ; home all without mesh bed level,G80 ; mesh bed leveling,G1 Y-3.0 F1000.0 ; go outside printing area,G1 X60.0 E9.0  F1000.0 ; intro line,G1 X100.0 E12.5  F1000.0 ; intro line</startingGcode>
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
   <toolChangeGcode></toolChangeGcode>
@@ -155,11 +155,11 @@
   <celebration>0</celebration>
   <celebrationSong>Looney Toons</celebrationSong>
   <postProcessing>{REPLACE &quot;; outer perimeter\n&quot; &quot;; outer perimeter\nM204 S600\n&quot;},{REPLACE &quot;; inner perimeter\n&quot; &quot;; inner perimeter\nM204 S1200\n&quot;},{REPLACE &quot;; solid layer\n&quot; &quot;; solid layer\nM204 S1500\n&quot;},{REPLACE &quot;; infill\n&quot; &quot;; infill\nM204 S2000\n&quot;}</postProcessing>
-  <defaultSpeed>2400</defaultSpeed>
+  <defaultSpeed>1800</defaultSpeed>
   <outlineUnderspeed>0.8</outlineUnderspeed>
   <solidInfillUnderspeed>0.8</solidInfillUnderspeed>
   <supportUnderspeed>0.8</supportUnderspeed>
-  <rapidXYspeed>4800</rapidXYspeed>
+  <rapidXYspeed>9000</rapidXYspeed>
   <rapidZspeed>1002</rapidZspeed>
   <minBridgingArea>50</minBridgingArea>
   <bridgingExtraInflation>1</bridgingExtraInflation>
@@ -231,7 +231,7 @@
     <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
     <topSolidLayers>5</topSolidLayers>
     <bottomSolidLayers>5</bottomSolidLayers>
-    <perimeterOutlines>2</perimeterOutlines>
+    <perimeterOutlines>3</perimeterOutlines>
     <outlineUnderspeed>0.8</outlineUnderspeed>
     <extruder name="Primary Extruder">
       <toolheadNumber>0</toolheadNumber>
@@ -252,12 +252,12 @@
   </autoConfigureQuality>
   <autoConfigureQuality name="NORMAL 0.2mm">
     <layerHeight>0.2</layerHeight>
-    <infillPercentage>22</infillPercentage>
+    <infillPercentage>35</infillPercentage>
     <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
     <firstLayerWidthPercentage>95</firstLayerWidthPercentage>
     <topSolidLayers>3</topSolidLayers>
     <bottomSolidLayers>3</bottomSolidLayers>
-    <perimeterOutlines>2</perimeterOutlines>
+    <perimeterOutlines>4</perimeterOutlines>
     <outlineUnderspeed>0.8</outlineUnderspeed>
     <extruder name="Primary Extruder">
       <toolheadNumber>0</toolheadNumber>
@@ -266,12 +266,12 @@
       <width>0.4</width>
       <extrusionMultiplier>1</extrusionMultiplier>
       <useRetract>1</useRetract>
-      <retractionDistance>1.2</retractionDistance>
+      <retractionDistance>0.8</retractionDistance>
       <extraRestartDistance>0</extraRestartDistance>
       <retractionZLift>0</retractionZLift>
       <retractionSpeed>3600</retractionSpeed>
       <useCoasting>1</useCoasting>
-      <coastingDistance>0.8</coastingDistance>
+      <coastingDistance>0.4</coastingDistance>
       <useWipe>1</useWipe>
       <wipeDistance>2</wipeDistance>
     </extruder>
@@ -292,19 +292,19 @@
       <width>0.4</width>
       <extrusionMultiplier>1</extrusionMultiplier>
       <useRetract>1</useRetract>
-      <retractionDistance>1.2</retractionDistance>
+      <retractionDistance>1</retractionDistance>
       <extraRestartDistance>0</extraRestartDistance>
       <retractionZLift>0</retractionZLift>
       <retractionSpeed>3600</retractionSpeed>
       <useCoasting>1</useCoasting>
-      <coastingDistance>1</coastingDistance>
+      <coastingDistance>0.4</coastingDistance>
       <useWipe>1</useWipe>
       <wipeDistance>2</wipeDistance>
     </extruder>
   </autoConfigureQuality>
   <autoConfigureMaterial name="TCP Flex 65 (DF)">
     <globalExtruderTemperature>260</globalExtruderTemperature>
-    <globalBedTemperature>50</globalBedTemperature>
+    <globalBedTemperature>60</globalBedTemperature>
     <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
     <fanSpeed>
       <setpoint layer="1" speed="0"/>
