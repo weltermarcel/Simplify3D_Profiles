@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<profile name="Prusa i3 MK2 - PET-G (extrudr)" version="2018-04-02 21:21:00" app="S3D-Software 4.0.0">
+<profile name="Prusa i3 MK2 - PET-G (extrudr)" version="2018-12-01 14:50:02" app="S3D-Software 4.0.1">
   <baseProfile>Prusa Mendel (modified)</baseProfile>
-  <printMaterial>PET-G (DF)</printMaterial>
+  <printMaterial></printMaterial>
   <printQuality>NORMAL 0.2mm</printQuality>
   <printExtruders></printExtruders>
   <extruder name="Primary Extruder">
@@ -13,7 +13,7 @@
     <useRetract>1</useRetract>
     <retractionDistance>0.6</retractionDistance>
     <extraRestartDistance>0</extraRestartDistance>
-    <retractionZLift>0</retractionZLift>
+    <retractionZLift>0.6</retractionZLift>
     <retractionSpeed>4800</retractionSpeed>
     <useCoasting>1</useCoasting>
     <coastingDistance>0.5</coastingDistance>
@@ -62,7 +62,7 @@
   <infillExtruder>0</infillExtruder>
   <internalInfillPattern>Grid</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>30</infillPercentage>
+  <infillPercentage>20</infillPercentage>
   <outlineOverlapPercentage>25</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>2</minInfillLength>
@@ -92,7 +92,7 @@
     <relayBetweenLayers>0</relayBetweenLayers>
     <relayBetweenLoops>0</relayBetweenLoops>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="225"/>
+    <setpoint layer="1" temperature="230"/>
   </temperatureController>
   <temperatureController name="Heated Bed">
     <temperatureNumber>1</temperatureNumber>
@@ -104,7 +104,8 @@
   </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0"/>
-    <setpoint layer="2" speed="60"/>
+    <setpoint layer="3" speed="60"/>
+    <setpoint layer="5" speed="100"/>
   </fanSpeed>
   <blipFanToFullPower>1</blipFanToFullPower>
   <adjustSpeedForCooling>1</adjustSpeedForCooling>
@@ -150,7 +151,7 @@
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
   <toolChangeGcode></toolChangeGcode>
-  <endingGcode>M83;,G1 E-6;,G91;,G1 Z5 F2000;,G90;,M104 S0 ; turn off temperature,M140 S0 ; turn off heatbed,M107 ; turn off fan,G1 X0 Y200; home X axis,M84 ; disable motors</endingGcode>
+  <endingGcode>M83;,G1 E-8;,G91;,G1 Z5 F2000;,G90;,M104 S0 ; turn off temperature,M140 S0 ; turn off heatbed,M107 ; turn off fan,G1 X0 Y200; home X axis,M84 ; disable motors</endingGcode>
   <exportFileFormat>gcode</exportFileFormat>
   <celebration>0</celebration>
   <celebrationSong>Looney Toons</celebrationSong>
@@ -242,7 +243,7 @@
       <useRetract>1</useRetract>
       <retractionDistance>1</retractionDistance>
       <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
+      <retractionZLift>0.4</retractionZLift>
       <retractionSpeed>4800</retractionSpeed>
       <useCoasting>1</useCoasting>
       <coastingDistance>0.4</coastingDistance>
@@ -252,7 +253,7 @@
   </autoConfigureQuality>
   <autoConfigureQuality name="NORMAL 0.2mm">
     <layerHeight>0.2</layerHeight>
-    <infillPercentage>30</infillPercentage>
+    <infillPercentage>20</infillPercentage>
     <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
     <firstLayerWidthPercentage>95</firstLayerWidthPercentage>
     <topSolidLayers>3</topSolidLayers>
@@ -268,7 +269,7 @@
       <useRetract>1</useRetract>
       <retractionDistance>0.6</retractionDistance>
       <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
+      <retractionZLift>0.6</retractionZLift>
       <retractionSpeed>4800</retractionSpeed>
       <useCoasting>1</useCoasting>
       <coastingDistance>0.5</coastingDistance>
@@ -302,13 +303,4 @@
       <wipeDistance>2</wipeDistance>
     </extruder>
   </autoConfigureQuality>
-  <autoConfigureMaterial name="PET-G (DF)">
-    <globalExtruderTemperature>225</globalExtruderTemperature>
-    <globalBedTemperature>65</globalBedTemperature>
-    <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
-    <fanSpeed>
-      <setpoint layer="1" speed="0"/>
-      <setpoint layer="2" speed="60"/>
-    </fanSpeed>
-  </autoConfigureMaterial>
 </profile>
